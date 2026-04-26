@@ -1,0 +1,32 @@
+Test case ID: TC_SD_001
+Test case name: Valid login and add first product to cart
+Module: Login & Cart
+
+Precondition:
+- User has access to https://www.saucedemo.com/
+- Valid credentials:
+  Username: standard_user
+  Password: secret_sauce
+
+Steps and expected results:
+
+1. Step: Navigate to https://www.saucedemo.com/
+   Expected: Login page is displayed with "Swag Labs" title.
+
+2. Step: Enter username standard_user in the Username field.
+   Expected: Username is entered successfully.
+
+3. Step: Enter password secret_sauce in the Password field.
+   Expected: Password is entered successfully.
+
+4. Step: Click the Login button.
+   Expected: User is redirected to the Products page.
+
+5. Step: Verify you see the Products page.
+   Expected: Page title shows "Products" and product list is visible.
+
+6. Step: Click Add to cart for the first product in the list.
+   Expected: Button text changes (e.g., to "Remove") indicating product is added to cart.
+
+7. Step: Verify cart badge shows 1.
+   Expected: Cart icon at top right shows a badge with number 1.
