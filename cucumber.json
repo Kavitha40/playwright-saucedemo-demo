@@ -1,0 +1,19 @@
+{
+  "default": {
+    "require": ["steps/*.ts"],
+    "paths": ["features/*.feature"],
+    "format": ["progress-bar", "allure-cucumberjs/reporter"],
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
