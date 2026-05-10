@@ -1,16 +1,20 @@
 {
-  "name": "playwright-projects",
+  "name": "playwright-cucumber-typescript",
   "version": "1.0.0",
+  "description": "Cucumber.js with Playwright and TypeScript in ESM mode",
   "type": "module",
-  "scripts": {"scripts": {
-  "test": "node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' node_modules/@cucumber/cucumber/bin/cucumber-js"
+  "main": "index.js",
+ "scripts": {
+  "test": "node --import tsx ./node_modules/@cucumber/cucumber/bin/cucumber-js"
 },
   "devDependencies": {
-    "@cucumber/cucumber": "^12.8.2",
-    "@playwright/test": "^1.49.0",
-    "allure-cucumberjs": "^3.7.2",
+    "@cucumber/cucumber": "^11.0.0",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^22.0.0",
+    "cross-env": "^7.0.3",
+    "playwright": "^1.40.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.0.0"
   }
-}
 }

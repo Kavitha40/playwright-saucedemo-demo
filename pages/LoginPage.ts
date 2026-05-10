@@ -1,16 +1,23 @@
 import { Page } from '@playwright/test';
 
 export class LoginPage {
-  constructor(private page: Page) {}
+  private page: Page;
+
+  constructor(page: Page) {
+    this.page = page;
+  }
 
   async navigate() {
     await this.page.goto('https://saucedemo.com');
   }
 
-  async login(user: string, pass: string) {
-    await this.page.fill('#user-name', user);
-    await this.page.fill('#password', pass);
+  // ADD THIS METHOD
+  async login(username: string, password: string) {
+    await this.page.fill('#user-name', username);
+    await this.page.fill('#password', password);
     await this.page.click('#login-button');
   }
 }
+
+
 

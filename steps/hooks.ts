@@ -1,20 +1,22 @@
 import { Before, After, Status } from '@cucumber/cucumber';
-import { chromium, Browser, Page } from '@playwright/test';
+import { chromium, Browser } from '@playwright/test';
 
 let browser: Browser;
 
-Before(async function (this: any) {
-  browser = await chromium.launch({ headless: false }); // Set to true for CI
-  const context = await browser.newContext();
-  this.page = await context.newPage();
+Before(async function () {
+    // These two lines MUST be inside the Before function
+    browser = await chromium.launch({ headless: false });
+    const context = await browser.newContext();
+    
+    this.page = await context.newPage();
 });
 
-After(async function (this: any, { result }) {
-  // 5) Screenshot for failed scenarios
-  if (result?.status === Status.FAILED) {
-    const screenshot = await this.page.screenshot();
-    await this.attach(screenshot, 'image/png');
-  }
-  await this.page.close();
-  await browser.close();
+
+After(async function ({ result }) {
+    if (result?.status === Status.FAILED && this.page) {
+        const screenshot = await this.page.screenshot();
+        await this.attach(screenshot, 'image/png');
+    }
+    if (this.page) await this.page.close();
+    if (browser) await browser.close();
 });

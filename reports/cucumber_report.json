@@ -1,0 +1,174 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-product-to-cart;user-adds-a-product-to-the-cart-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User adds a product to the cart successfully",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps\\add_to_cart.steps.ts:11"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1087700,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at LoginPage.navigate (C:\\Users\\knhar\\OneDrive\\Desktop\\playwright\\playwright-projects\\pages\\LoginPage.ts:12:21)\n    at World.<anonymous> (C:\\Users\\knhar\\OneDrive\\Desktop\\playwright\\playwright-projects\\steps\\add_to_cart.steps.ts:13:19)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user logs in with valid credentials",
+            "match": {
+              "location": "steps\\add_to_cart.steps.ts:16"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the user adds a product to the cart",
+            "match": {
+              "location": "steps\\add_to_cart.steps.ts:21"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the product should appear in the cart",
+            "match": {
+              "location": "steps\\add_to_cart.steps.ts:27"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-product-to-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add product to cart",
+    "tags": [],
+    "uri": "features\\add_to_cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;successful-login",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Successful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I open the SauceDemo website",
+            "match": {
+              "location": "steps\\login.steps.ts:5"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 334700,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at LoginPage.navigate (C:\\Users\\knhar\\OneDrive\\Desktop\\playwright\\playwright-projects\\pages\\LoginPage.ts:12:21)\n    at World.<anonymous> (C:\\Users\\knhar\\OneDrive\\Desktop\\playwright\\playwright-projects\\steps\\login.steps.ts:8:24)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I login with valid credentials",
+            "match": {
+              "location": "steps\\login.steps.ts:13"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should see the Products page",
+            "match": {
+              "location": "steps\\login.steps.ts:17"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "test;check-cucumber",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Check cucumber",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I test cucumber",
+            "match": {
+              "location": "steps\\test.steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 650399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "test",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Test",
+    "tags": [],
+    "uri": "features\\test.feature"
+  }
+]
