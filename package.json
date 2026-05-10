@@ -2,12 +2,9 @@
   "name": "playwright-projects",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "test": "node --loader ts-node/esm node_modules/@cucumber/cucumber/bin/cucumber-js",
-    "report:generate": "allure generate allure-results --clean -o allure-report",
-    "report:open": "allure open allure-report",
-    "report": "npm run report:generate && npm run report:open"
-  },
+  "scripts": {"scripts": {
+  "test": "node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' node_modules/@cucumber/cucumber/bin/cucumber-js"
+},
   "devDependencies": {
     "@cucumber/cucumber": "^12.8.2",
     "@playwright/test": "^1.49.0",
@@ -16,4 +13,4 @@
     "typescript": "^5.0.0"
   }
 }
-
+}

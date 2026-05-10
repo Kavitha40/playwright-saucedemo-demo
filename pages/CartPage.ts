@@ -1,12 +1,15 @@
-import { expect, Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 
 export class CartPage {
-  constructor(private page: Page) {}
+  private page: Page; // Explicitly declare the property
 
-  cartItem = this.page.locator('.cart_item');
+  constructor(page: Page) {
+    this.page = page; // Manually assign it
+  }
 
   async verifyItemInCart() {
-    await expect(this.cartItem).toBeVisible();
+    const item = this.page.locator('.cart_item');
+    await expect(item).toBeVisible();
   }
 }
 
