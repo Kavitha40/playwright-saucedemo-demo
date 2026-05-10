@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import { LoginPage } from '../pages/LoginPage.js';     // Added .js
-import { ProductsPage } from '../pages/ProductsPage.js'; // Added .js
-import { CartPage } from '../pages/CartPage.js';         // Added .js
+import { LoginPage } from '../../pages/LoginPage.js';     // Added .js
+import { ProductsPage } from '../../pages/ProductsPage.js'; // Added .js
+import { CartPage } from '../../pages/CartPage.js';         // Added .js
 
 
 let loginPage: LoginPage;

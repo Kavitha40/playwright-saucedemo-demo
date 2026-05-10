@@ -1,6 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import { LoginPage } from '../pages/LoginPage.js';
-import { ProductsPage } from '../pages/ProductsPage.js';
+import { LoginPage } from '../../pages/LoginPage.js';
+import { ProductsPage } from '../../pages/ProductsPage.js';
 
 Given('I open the SauceDemo website', async function () {
   // MUST pass 'this.page' inside the brackets
