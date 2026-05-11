@@ -1,21 +1,17 @@
-import { defineConfig, devices } from '@playwright/test';
+const { defineConfig, devices } = require('@playwright/test');
 
-export default defineConfig({
+module.exports = defineConfig({
   testDir: './tests',
-
-  use: {
-    baseURL: 'https://www.saucedemo.com',
-    headless: true,
-    trace: 'on-first-retry'
-  },
-
-  retries: 0,
-
   reporter: [
     ['list'],
     ['allure-playwright']
   ],
-
+  use: {
+    headless: true,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'retain-on-failure'
+  },
   projects: [
     {
       name: 'chromium',
